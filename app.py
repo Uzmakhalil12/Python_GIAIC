@@ -31,4 +31,23 @@ daily_quote = random.choice(quotes)
 
 # Streamlit App UI
 st.title("🌱 Growth Mindset Challenge")
+st.subheader("🚀 Today's Challenge:")
+st.write(f"*{daily_challenge}*")
 
+st.subheader("💡 Motivational Quote:")
+st.write(f"*{daily_quote}*")
+
+# Progress tracking
+if "completed_challenges" not in st.session_state:
+    st.session_state.completed_challenges = 0
+
+if st.button("✅ I Completed This Challenge!"):
+    st.session_state.completed_challenges += 1
+    st.success(f"Great job! You've completed {st.session_state.completed_challenges} challenges.")
+
+# Display progress
+st.sidebar.title("📊 Your Progress")
+st.sidebar.write(f"Challenges Completed: *{st.session_state.completed_challenges}*")
+
+# Footer
+st.caption("🚀 Keep growing, keep learning! 🌟")
