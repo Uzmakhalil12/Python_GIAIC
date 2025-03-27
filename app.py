@@ -49,5 +49,17 @@ if st.button("✅ I Completed This Challenge!"):
 st.sidebar.title("📊 Your Progress")
 st.sidebar.write(f"Challenges Completed: *{st.session_state.completed_challenges}*")
 
+# Survey Questions
+st.subheader("📝 Growth Mindset Survey")
+st.write("Help us understand your growth journey!")
+
+q1 = st.radio("Do you believe challenges help you grow?", ["Yes", "No", "Not Sure"])
+q2 = st.slider("On a scale of 1-10, how much do you embrace challenges?", 1, 10, 5)
+q3 = st.text_input("What is one personal goal you're working on?")
+q4 = st.text_area("Share a moment when you turned failure into a lesson:")
+
+if st.button("📩 Submit Survey"):
+    st.success("Thank you for your response! Keep embracing the growth mindset! 🚀")
+
 # Footer
 st.caption("🚀 Keep growing, keep learning! 🌟")
