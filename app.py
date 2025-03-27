@@ -51,7 +51,7 @@ st.sidebar.write(f"Challenges Completed: *{st.session_state.completed_challenges
 
 # Save the script
 script_path = "/mnt/data/growth_mindset_app.py"
-with open(script_path, "w") as file:
+    with open(script_path, "w") as file:
     file.write("""
 import streamlit as st
 import random
