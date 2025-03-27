@@ -31,4 +31,4 @@ daily_quote = random.choice(quotes)
 
 # Streamlit App UI
 st.title("🌱 Growth Mindset Challenge")
-st.subheader(🚀
+
